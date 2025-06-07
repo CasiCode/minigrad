@@ -66,7 +66,7 @@ class Scalar:
         assert isinstance(rhs, numbers.Number), 'invalid power dtype'
         out = Scalar(
             value=self.value**rhs,
-            _children=(self, rhs),
+            _children=(self, ),
             _operation='__pow__'
         )
 
