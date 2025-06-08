@@ -19,7 +19,7 @@ class Scalar:
         self.grad = 0.0
         self._prev = set(_children)
         self._operation = _operation
-        self._backward = None
+        self._backward = lambda: None
 
     def __repr__(self) -> str:
         return f'Scalar(value={self.value})'
